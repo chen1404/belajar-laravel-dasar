@@ -7,14 +7,14 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\App;
 use Tests\TestCase;
 
-class EnviromentTest extends TestCase
+class AppEnvironmentTest extends TestCase
 {
-    public function testEnvironment()
+    public function testAppEnv()
     {
-        $this->expectNotToPerformAssertions();
-        if (App::environment("testing")) {
-            echo "Logic in local env" . PHP_EOL;
+        if(App::environment(['testing', 'prod', 'dev'])){
+            // kode program kita
             self::assertTrue(true);
         }
     }
+
 }

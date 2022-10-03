@@ -2,9 +2,9 @@
 
 return [
     "author" => [
-        "first" => "Rai",
-        "last" => "Stalins"    
+        "first" => env('NAME_FIRST', "Satria"),
+        "last" => env('NAME_LAST', "Bagus")
     ],
     "email" => "satriabaguse@gmail.com",
-    "web" => "kodingindonesia.com"
+    "web" => "https://www.kodingindonesia.com"
 ];

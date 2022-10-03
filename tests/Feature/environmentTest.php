@@ -4,14 +4,22 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Env;
 use Tests\TestCase;
 
-class environmentTest extends TestCase
+class EnvironmentTest extends TestCase
 {
-    public function testEnv()
-    {
-        $appName = env("Youtube", "KodingIndonesia");
+    // public function testGetEnv()
+    // {
+    //     $youtube = env('YOUTUBE');
 
-        self::assertEquals("KodingIndonesia", $appName);
+    //     // self::assertEquals('Programmer Zaman Now', $youtube);
+    // }
+
+    public function testDefaultEnv()
+    {
+        $author = Env::get('AUTHOR', 'Satria');
+
+        self::assertEquals('Satria', $author);
     }
 }
