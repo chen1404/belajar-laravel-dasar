@@ -71,11 +71,10 @@ class InputControllerTest extends TestCase
         $this->post('/input/filter/only', [
             "name" => [
                 "first" => "Satria",
-                "middle" => "Bagus",
-                "last" => "Eka Candra"
+                "middle" => "Eka Candra",
+                "last" => "Bagus"
             ]
-        ])->assertSeeText("Satria")->assertSeeText("Bagus")
-            ->assertDontSeeText("gus");
+        ])->assertSeeText("Satria")->assertDontSeeText("Eka Candra");
     }
 
     public function testFilterExcept()

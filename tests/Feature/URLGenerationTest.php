@@ -10,7 +10,7 @@ class URLGenerationTest extends TestCase
 {
     public function testURLCurrent()
     {
-        $this->get('/url/current?name=Rausyan')
+        $this->get('/url/current?name=Satria')
             ->assertSeeText("/url/current?name=Satria");
     }
 

@@ -25,14 +25,14 @@ class RedirectController extends Controller
     public function redirectName(): RedirectResponse
     {
         return redirect()->route('redirect-hello', [
-            "name" => "Rausyan"
+            "name" => "Satria"
         ]);
     }
 
     public function redirectAction(): RedirectResponse
     {
         return redirect()->action([RedirectController::class, 'redirectHello'], [
-            'name' => 'Rausyan'
+            'name' => 'Satria'
         ]);
     }
 

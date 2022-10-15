@@ -12,7 +12,7 @@ class RoutingTest extends TestCase
     {
         $this->get('/pzn')
             ->assertStatus(200)
-            ->assertSeeText('Hello satrai_bagus');
+            ->assertSeeText('Hello Satrai_bagus');
     }
 
     public function testRedirect()
@@ -24,13 +24,13 @@ class RoutingTest extends TestCase
     public function testFallback()
     {
         $this->get('/tidakada')
-            ->assertSeeText('404 by satrai_bagus');
+            ->assertSeeText('404 by Satrai_bagus');
 
         $this->get('/tidakadalagi')
-            ->assertSeeText('404 by satrai_bagus');
+            ->assertSeeText('404 by Satrai_bagus');
 
         $this->get('/ups')
-            ->assertSeeText('404 by satrai_bagus');
+            ->assertSeeText('404 by Satrai_bagus');
     }
 
     public function testRouteParameter()
@@ -54,7 +54,7 @@ class RoutingTest extends TestCase
             ->assertSeeText('Category 100');
 
         $this->get('/categories/Satria')
-            ->assertSeeText('404 by satrai_bagus');
+            ->assertSeeText('404 by Satrai_bagus');
     }
 
     public function testRouteParameterOptional()

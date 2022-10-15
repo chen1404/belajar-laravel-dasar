@@ -11,7 +11,7 @@ class CookieController extends Controller
     public function createCookie(Request $request): Response
     {
         return response("Hello Cookie")
-            ->cookie("User-Id", "Rausyanfikr", 1000, "/")
+            ->cookie("User-Id", "Satria", 1000, "/")
             ->cookie("Is-Member", "true", 1000, "/");
     }
 
@@ -19,7 +19,7 @@ class CookieController extends Controller
     {
         return response()
             ->json([
-                "userId" => $request->cookie("User-Id", "Rausyanfikr"),
+                "userId" => $request->cookie("User-Id", "Satria"),
                 "isMember" => $request->cookie("Is-Member", 'false')
             ]);
     }

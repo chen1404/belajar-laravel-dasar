@@ -108,7 +108,7 @@ Route::get('/redirect/name', [\App\Http\Controllers\RedirectController::class, '
 Route::get('/redirect/name/{name}', [\App\Http\Controllers\RedirectController::class, 'redirectHello'])
     ->name('redirect-hello');
 Route::get('/redirect/named', function () {
-    return \Illuminate\Support\Facades\URL::route('redirect-hello', ['name' => 'Rausyan']);
+    return \Illuminate\Support\Facades\URL::route('redirect-hello', ['name' => 'Satria']);
 });
 
 Route::get('/redirect/action', [\App\Http\Controllers\RedirectController::class, 'redirectAction']);

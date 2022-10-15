@@ -21,7 +21,7 @@ class ResponseControllerTest extends TestCase
             ->assertStatus(200)
             ->assertSeeText('Satria')->assertSeeText('Bagus')
             ->assertHeader('Content-Type', 'application/json')
-            ->assertHeader('Author', 'satrai_bagus')
+            ->assertHeader('Author', 'Satrai_bagus')
             ->assertHeader('App', 'Belajar Laravel');
     }
 
@@ -49,6 +49,6 @@ class ResponseControllerTest extends TestCase
     public function testDownload()
     {
         $this->get('/response/type/download')
-            ->assertDownload('Rausyanfikr.png');
+            ->assertDownload('satria.jpg');
     }
 }
